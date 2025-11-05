@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>The total number of users are: <%= countUser %></h1>
+    <a href="/user">
+        <button>See All User</button>
+    </a>
+    
+    <!-- Add New User Button -->
+    <a href="/user/add">
+        <button>Join us Today!</button>
+    </a>
+    
+</body>
+</html>

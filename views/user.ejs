@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USER</title>
+    <style>
+      table,
+      th,
+      td {
+        border: solid gray 1px;
+      }
+
+      .sticky-button {
+            position: sticky;
+            top: 0;  /* Keeps the button at the top of the page */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 65%;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 100; /* Keeps it above other elements */
+        }
+
+        .content {
+            height: 2000px; /* Just to create a scrollable page */
+            background-color: #f0f0f0;
+        }
+    </style>
+  </head>
+  <body>
+
+     <a href="/">
+        <button class="sticky-button">Back TO Home</button>
+    </a>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>email</th>
+      </tr>
+
+      <% for(user of users){ %>
+      <tr>
+        <td><%=user.id%></td>
+        <td><%=user.username%></td>
+        <td><%=user.email%></td>
+       <td> <form method="GET" action="/user/<%=user.id%>/edit">
+            <button>Edit Username</button>
+        </form>
+        </td>
+        <td>
+            <form method="GET" action="/user/<%=user.id%>/delete">
+                <button>Delete</button>
+            </form>
+        </td>
+      </tr>
+
+      <% } %>
+    </table>
+    <hr />
+   
+  </body>
+</html>
