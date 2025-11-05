@@ -22,9 +22,11 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   database: "prac_app",
-  password: "Sourabh#1S",
+  password: "1111", // this is an random pass you may put your SQL db root
 });
 
+
+// i use this to generate fake data in my sql database.
 let getauser = () => {
   return [
     faker.string.uuid(),
@@ -35,8 +37,6 @@ let getauser = () => {
 };
 
 
-
- 
 
 //Home ROute
 app.get("/",(req, res)=>{
